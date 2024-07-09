@@ -22,15 +22,21 @@ const PhotoCard = ({ city, onPhotoClick }) => {
       </h3>
 
       <div className={styles.photoContainer}>
-        {city.photos.map((photo, index) => (
-          <img
-            key={index}
-            src={photo}
-            alt={`Photo ${index + 1}`}
-            className={styles.photo}
-            onClick={() => onPhotoClick(city.photos, index)}
-          />
-        ))}
+        {city.photos.length ? (
+          city.photos.map((photo, index) => (
+            <img
+              key={index}
+              src={photo}
+              alt={`Photo ${index + 1}`}
+              className={styles.photo}
+              onClick={() => onPhotoClick(city.photos, index)}
+            />
+          ))
+        ) : (
+          <div className={styles.text}>
+            No photo was uploaded by you for this trip.
+          </div>
+        )}
       </div>
     </div>
   );

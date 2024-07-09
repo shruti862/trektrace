@@ -27,3 +27,7 @@
   cursor: pointer;
   border: 1px solid #ddd;
 }
+.text {
+  color: red;
+  font-size: larger;
+}
