@@ -1,0 +1,202 @@
+.login {
+  margin: 2.5rem;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+  min-height: calc(100vh - 5rem);
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 2rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  /* Different from other form */
+  width: 48rem;
+  margin: 8rem auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* styles.module.css */
+
+.container {
+  width: 75%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background: var(
+    --gradient-overlay
+  ); /* Define your gradient in variables or directly */
+}
+
+.innerContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  margin-top: 14rem;
+}
+
+.formContainer {
+  width: 66.6667%;
+  height: 100%;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 0.375rem;
+}
+
+.centeredFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 1600px;
+  height: 160px;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: -0.25rem;
+  margin-top: 5rem;
+  color: black;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  display: flex;
+  margin-bottom: 1.25rem;
+  margin-left: 9.25rem;
+  border: 2px solid #d1d5db; /* gray-300 */
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1rem 3rem;
+  width: 24rem;
+  height: 4rem;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+
+.button:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #2563eb; /* blue-600 */
+}
+
+.googleIcon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.divider {
+  border-top: 1px solid #9ca3af; /* gray-400 */
+  margin-top: 0.5rem;
+  width: 100%;
+  box-shadow: 0 1px 2px rgba(57, 62, 86, 0.5);
+}
+
+.subtitle {
+  color: #dee2eb; /* gray-600 */
+  margin-top: -1rem;
+  margin-left: 14rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.inputContainer {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.label {
+  display: block;
+  color: #4b5563; /* gray-700 */
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #6b7280; /* gray-500 */
+  border-radius: 0.375rem;
+  color: black;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #6b7280; /* gray-500 */
+}
+
+.loginButton {
+  width: 100%;
+  background-color: #2563eb; /* blue-600 */
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.2s;
+}
+
+.loginButton:hover {
+  background-color: #1d4ed8; /* blue-700 */
+}
+
+.signupContainer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #dee2eb; /* gray-600 */
+  margin-top: -1rem;
+
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.signupText {
+  color: #698bdd; /* gray-600 */
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+  font-size: 1.125rem;
+}
+.loginContainer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #dee2eb; /* gray-600 */
+  margin-top: -1rem;
+
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.loginText {
+  color: #698bdd; /* gray-600 */
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+  font-size: 1.125rem;
+}

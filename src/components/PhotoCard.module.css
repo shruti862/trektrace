@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.title {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+  color: black;
+}
+.photoContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+}

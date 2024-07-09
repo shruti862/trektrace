@@ -1,0 +1,64 @@
+.modal {
+  position: fixed;
+  top: 104px;
+  left: 450px;
+  width: 40%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  max-height: 40%;
+}
+
+.closeButton {
+  position: absolute;
+  top: -131px;
+  right: -124px;
+  background: none;
+  border: none;
+  color: white;
+  background-color: red;
+  padding: 0.5px 4px;
+  font-size: 2rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.photo {
+  /* position: absolute; */
+  width: 500px; /* Fixed width for modal photos */
+  height: 500px; /* Fixed height for modal photos */
+  object-fit: cover;
+}
+
+.prevButton,
+.nextButton {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  color: white;
+  padding: 4px;
+  font-weight: bold;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.prevButton {
+  left: -160px;
+}
+
+.nextButton {
+  right: -160px;
+}

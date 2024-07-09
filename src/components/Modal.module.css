@@ -1,0 +1,39 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modalMain {
+  margin-top: 15%;
+  margin-left: 7rem;
+  padding: 20px;
+  color: black;
+  border: 1px solid #888;
+  width: 30%;
+  background: white;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.displayNone {
+  display: none;
+}
+
+.closeButton {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 6px;
+  margin-bottom: 2rem;
+  float: right;
+  cursor: pointer;
+}
