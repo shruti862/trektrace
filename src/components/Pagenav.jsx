@@ -27,6 +27,7 @@ function Pagenav() {
   };
   const handleNavigate = () => {
     navigate("/album");
+    window.location.reload();
   };
   return (
     <nav className={styles.nav}>
