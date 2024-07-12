@@ -22,7 +22,7 @@ const PhotoCard = ({ city, onPhotoClick }) => {
       </h3>
 
       <div className={styles.photoContainer}>
-        {city.photos.length ? (
+        {city.photos?.length ? (
           city.photos.map((photo, index) => (
             <img
               key={index}

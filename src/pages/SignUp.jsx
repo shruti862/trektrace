@@ -33,7 +33,7 @@ export default function Login() {
       const data = await signInWithPopup(auth, provider);
       console.log(data);
       const array = data.user.displayName.split(" ");
-      const name = array[0] + " " + array[1];
+      const name = array[0];
       const userEmail = data.user.email;
 
       Cookies.set("Photo", data.user.photoURL);
@@ -41,8 +41,8 @@ export default function Login() {
       Cookies.set("Name", name);
 
       if (users.find((doc) => doc.email == data.user.email) == undefined) {
-        await addUser({ name: name, email: userEmail });
-        const UserId = data.id;
+        const userData = await addUser({ name: name, email: userEmail });
+        const UserId = userData.id;
         Cookies.set("User", UserId);
         navigate("/");
         toast.success("Successfully signed up!");
@@ -105,7 +105,7 @@ export default function Login() {
           Continue with Google
         </button>
         <div className={styles.divider}></div>
-        <p className={styles.subtitle}>Or sign in with credentials</p>
+        <p className={styles.subtitle}>Or sign up with credentials</p>
         <div className={styles.row}>
           <label htmlFor="email">Full Name</label>
           <input
@@ -137,7 +137,7 @@ export default function Login() {
 
         <div>
           <Button type="primary" onClick={handleSignUp}>
-            Login
+            Signup
           </Button>
         </div>
         <div className={styles.loginContainer}>

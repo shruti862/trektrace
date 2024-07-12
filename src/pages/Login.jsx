@@ -37,7 +37,7 @@ export default function Login() {
 
       Cookies.set("User", userId);
       const array = data.user.displayName.split(" ");
-      const name = array[0] + " " + array[1];
+      const name = array[0];
       Cookies.set("Photo", data.user.photoURL);
       Cookies.set("Email", userEmail);
       Cookies.set("Name", name);
