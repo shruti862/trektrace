@@ -160,7 +160,11 @@ function Form() {
           />
         </div>
         <div className={styles.row}>
-          <Button type="secondary" onClick={handlePhotoSubmit}>
+          <Button
+            type="secondary"
+            onClick={handlePhotoSubmit}
+            disabled={uploadedPhotos.length > 0}
+          >
             Click here to upload Photos
           </Button>
         </div>

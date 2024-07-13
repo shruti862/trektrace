@@ -92,6 +92,7 @@
   width: 24rem;
   height: 4rem;
   transition: box-shadow 0.2s, color 0.2s;
+  cursor: pointer;
 }
 
 .button:hover {

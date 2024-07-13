@@ -3,10 +3,11 @@ import Modal from "./Modal";
 import styles from "./UploadPhotos.module.css";
 import { storage } from "../../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import toast from "react-hot-toast";
 // eslint-disable-next-line react/prop-types
 const UploadPhotos = ({ show, handleClose, setUploadedPhotos }) => {
   const [photos, setPhotos] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   const handleFileChange = (event) => {
     const files = Array.from(event.target.files);
     setPhotos((prevPhotos) => [...prevPhotos, ...files]);
@@ -17,15 +18,24 @@ const UploadPhotos = ({ show, handleClose, setUploadedPhotos }) => {
   };
   const handleUpload = async (e) => {
     e.preventDefault();
-    const photoUrls = [];
-    for (const photo of photos) {
-      const storageRef = ref(storage, `photos/${photo.name}`);
-      await uploadBytes(storageRef, photo);
-      const url = await getDownloadURL(storageRef);
-      photoUrls.push(url);
+    try {
+      setLoading(true);
+      const uploadPromises = photos.map(async (photo) => {
+        const storageRef = ref(storage, `photos/${photo.name}`);
+        await uploadBytes(storageRef, photo);
+        const url = await getDownloadURL(storageRef);
+        return url;
+      });
+
+      const photoUrls = await Promise.all(uploadPromises);
+      setUploadedPhotos(photoUrls);
+      toast.success("Successfully Uploaded!");
+      handleClose();
+    } catch (err) {
+      console.log(err.message);
+    } finally {
+      setLoading(false);
     }
-    setUploadedPhotos(photoUrls);
-    handleClose();
   };
   return (
     <div className={styles.container}>
@@ -55,7 +65,7 @@ const UploadPhotos = ({ show, handleClose, setUploadedPhotos }) => {
           ))}
         </div>
         <button className={styles.secondaryButton} onClick={handleUpload}>
-          Upload
+          {loading ? "Uploading..." : "Upload"}
         </button>
       </Modal>
     </div>
